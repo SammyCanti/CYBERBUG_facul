@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinamento: Senhas e Autenticação</title>
+    <link rel="stylesheet" href="css/treinamentoSenha.css">
+    <link rel="shortcut icon" type="image/png" href="./img/logo.png">
+</head>
+<body>
+    <div class="training-container">
+        <h1>Treinamento: Senhas e Autenticação</h1>
+        <div class="progress">
+            <p id="progress">Progresso: 0%</p>
+            <p id="score">Pontuação: 0</p>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+
+        <!-- Níveis de treinamento -->
+        <section class="level" id="level-easy">
+            <h2>Nível Fácil</h2>
+            <p>Qual das práticas a seguir ajuda a criar uma senha mais segura?</p>
+            <button class="option" data-answer="wrong">Usar palavras comuns combinadas com números, como "amigo123".</button>
+            <button class="option" data-answer="wrong">Criar uma senha curta e fácil de lembrar, como "senha!".</button>
+            <button class="option" data-answer="correct">Utilizar uma combinação de letras maiúsculas e minúsculas, números e caracteres especiais.</button>
+            <button class="option" data-answer="wrong">Reutilizar senhas antigas em novas contas para facilitar o acesso.</button>
+            <button class="option" data-answer="wrong">Utilizar datas importantes.</button>
+            <p class="feedback hidden" id="feedback-easy"></p>
+        </section>
+        <section class="level" id="level-easy">
+            <h2>Nível Médio</h2>
+            <p>Qual das opções a seguir representa uma senha mais segura?</p>
+            <button class="option" data-answer="wrong">senha123</button>
+            <button class="option" data-answer="wrong">Password!</button>
+            <button class="option" data-answer="correct">!7gH$2kF#bP9</button>
+            <button class="option" data-answer="wrong">qwerty</button>
+            <button class="option" data-answer="wrong">123456</button>
+            <p class="feedback hidden" id="feedback-easy"></p>
+        </section>
+
+        <section class="level hidden" id="level-hard">
+            <h2>Nível Difícil</h2>
+            <p>Qual é o principal benefício de usar a autenticação multifator (MFA) em uma conta?</p>
+            <button class="option" data-answer="wrong">Facilitar o acesso a partir de diferentes dispositivos.</button>
+            <button class="option" data-answer="wrong">Permitir o acesso a contas mesmo sem uma senha.</button>
+            <button class="option" data-answer="wrong">Garantir que a senha nunca precise ser alterada.</button>
+            <button class="option" data-answer="correct">Aumentar a segurança ao exigir um segundo método de verificação.</button>
+            <button class="option" data-answer="wrong">Não existem benefícios.</button>
+            <p class="feedback hidden" id="feedback-hard"></p>
+        </section>
+
+        <button id="nextButton" class="hidden">Próximo</button>
+    </div>
+
+    <!-- Pop-up de conclusão -->
+    <div id="completionPopup" class="hidden">
+        <p id="completionMessage"></p>
+        <a href="iniciarJogo.html"><button>Voltar ao Início</button></a>
+    </div>
+
+    <script src="js/treinamentoSenha.js"></script>
+</body>
+</html>

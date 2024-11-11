@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinamento: Proteção de Dados e Privacidade</title>
+    <link rel="stylesheet" href="css/treinamentoDados.css">
+    <link rel="shortcut icon" type="image/png" href="./img/logo.png">
+</head>
+<body>
+    <div class="training-container">
+        <h1>Treinamento: Proteção de Dados e Privacidade</h1>
+        <div class="progress">
+            <p id="progress">Progresso: 0%</p>
+            <p id="score">Pontuação: 0</p>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+
+        <!-- Níveis de treinamento -->
+        <section class="level" id="level-easy">
+            <h2>Nível Fácil</h2>
+            <p>Qual das práticas a seguir é recomendada para proteger dados pessoais na internet?</p>
+            <button class="option" data-answer="wrong">Usar a mesma senha para todos os sites para facilitar o acesso.</button>
+            <button class="option" data-answer="wrong">Compartilhar senhas de forma segura por e-mail com amigos próximos.</button>
+            <button class="option" data-answer="wrong">Salvar informações bancárias diretamente no navegador para agilidade.</button>
+            <button class="option" data-answer="wrong">Desativar qualquer tipo de autenticação em duas etapas.</button>
+            <button class="option" data-answer="correct">Evitar compartilhar dados pessoais em sites desconhecidos ou não confiáveis.</button>
+            <p class="feedback hidden" id="feedback-easy"></p>
+        </section>
+
+        <section class="level hidden" id="level-medium">
+            <h2>Nível Médio</h2>
+            <p>Qual é a função principal de uma política de privacidade em um site?</p>
+            <button class="option" data-answer="correct">Informar os usuários sobre quais dados são coletados e como serão usados.</button>
+            <button class="option" data-answer="wrong">Garantir que o site nunca colete dados dos usuários.</button>
+            <button class="option" data-answer="wrong">Proibir o uso de cookies e outras tecnologias de rastreamento.</button>
+            <button class="option" data-answer="wrong">Oferecer um backup automático de dados coletados no site.</button>
+            <button class="option" data-answer="wrong">Fornecer ao usuário um relatório detalhado de suas atividades online.</button>
+            <p class="feedback hidden" id="feedback-medium"></p>
+        </section>
+
+        <section class="level hidden" id="level-hard">
+            <h2>Nível Difícil</h2>
+            <p>Em relação à proteção de dados, qual das opções abaixo descreve melhor o conceito de "anonimização"?</p>
+            <button class="option" data-answer="wrong">Transformar dados para que possam ser acessados apenas por administradores autorizados.</button>
+            <button class="option" data-answer="wrong">Remover completamente todos os dados pessoais de um conjunto de dados.</button>
+            <button class="option" data-answer="correct">Modificar os dados para que eles não possam ser associados a uma pessoa específica.</button>
+            <button class="option" data-answer="wrong">Armazenar dados de forma criptografada, com acesso controlado.</button>
+            <button class="option" data-answer="wrong">Permitir que os usuários excluam seus dados pessoais a qualquer momento.</button>
+            <p class="feedback hidden" id="feedback-hard"></p>
+        </section>
+
+        <button id="nextButton" class="hidden">Próximo</button>
+    </div>
+
+    <!-- Pop-up de conclusão -->
+    <div id="completionPopup" class="hidden">
+        <p id="completionMessage"></p>
+        <a href="iniciarJogo.html"><button>Voltar ao Início</button></a>
+    </div>
+
+    <script src="js/treinamentoDados.js"></script>
+</body>
+</html>

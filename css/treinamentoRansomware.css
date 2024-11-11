@@ -1,0 +1,203 @@
+/* Estilos Gerais */
+body {
+    background: linear-gradient(135deg, #1d1f21, #2c3e50);
+    color: #ecf0f1;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contêiner de Treinamento */
+.training-container {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Progresso */
+.progress {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+}
+
+.progress-bar-container {
+    background-color: #444;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.progress-bar {
+    background-color: #27ae60;
+    height: 10px;
+    width: 0;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+/* Botões */
+.option {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 10px;
+}
+
+.option:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.feedback {
+    font-size: 1em;
+    color: #e74c3c;
+    margin-top: 10px;
+}
+
+    .hidden {
+        display: none;
+    }
+
+    /* Modal de Conclusão */
+    .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal-content {
+        background-color: #fff;
+        color: #333;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    #restartButton {
+        background-color: #27ae60;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-top: 20px;
+        transition: background-color 0.3s;
+    }
+
+    #restartButton:hover {
+        background-color: #219150;
+    }
+
+
+    /* Estilo para o pop-up de conclusão */
+    #completionPopup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 30px 40px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        z-index: 1000;
+        text-align: center;
+        width: 80%;
+        max-width: 500px;
+        opacity: 0;
+        animation: fadeIn 0.5s forwards;
+    }
+
+    /* Estilo para o botão Próximo */
+    #nextButton {
+        background-color: #2ecc71;  /* Cor de fundo azul */
+        color: white;               /* Texto branco */
+        padding: 5px 15px;         /* Espaçamento interno */
+        border-radius: 25px;        /* Bordas arredondadas */
+        font-size: 0.8em;           /* Tamanho de fonte */
+        cursor: pointer;           /* Aparece como pointer ao passar o mouse */
+        border: none;               /* Remove borda */
+        text-transform: uppercase;  /* Texto em maiúsculas */
+        transition: background-color 0.3s, transform 0.2s; /* Animação suave */
+        display: inline-block;      /* Para que o botão apareça como um bloco */
+        margin-top: 20px;           /* Espaçamento superior */
+    }
+
+    #nextButton:hover {
+        background-color: #25a35a;  /* Cor de fundo mais escura ao passar o mouse */
+        transform: translateY(-3px);  /* Efeito de levitar ao passar o mouse */
+    }
+
+    #nextButton:active {
+        transform: translateY(1px);  /* Efeito de pressionamento */
+    }
+
+    #nextButton.hidden {
+        display: none;  /* Mantém o botão invisível quando a classe 'hidden' está ativa */
+    }
+
+
+    /* Animação para o pop-up de conclusão */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translate(-50%, -45%);
+        }
+        to {
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    /* Estilo para a mensagem de conclusão */
+    #completionMessage {
+        font-size: 1.4em;
+        color: #2c3e50;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    /* Botão para voltar ao início */
+    #completionPopup button {
+        background-color: #3498db;
+        color: white;
+        padding: 12px 25px;
+        border-radius: 25px;
+        border: none;
+        font-size: 1.1em;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+        margin-top: 20px;
+    }
+
+    #completionPopup button:hover {
+        background-color: #2980b9;
+        transform: translateY(-3px);
+    }
+
+    #completionPopup button:active {
+        transform: translateY(1px);
+    }
+
+    #completionPopup .hidden {
+        display: none;
+    }
+    

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinamento: Phishing</title>
+    <link rel="stylesheet" href="css/treinamentoPhishing.css">
+    <link rel="shortcut icon" type="image/png" href="./img/logo.png">
+</head>
+<body>
+    <div class="training-container">
+        <h1>Treinamento: Phishing</h1>
+        <div class="progress">
+            <p id="progress">Progresso: 0%</p>
+            <p id="score">Pontuação: 0</p>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+
+        <section class="interactive-content">
+            <h2>O que é Phishing?</h2>
+            <p>Phishing é uma técnica usada por cibercriminosos para enganar usuários e obter informações pessoais, como senhas e dados de cartão de crédito.</p>
+            <p>Os ataques de phishing podem ocorrer via e-mail, mensagens de texto ou até mesmo redes sociais. Sempre verifique o remetente e o link antes de clicar.</p>
+        </section>
+
+        <!-- Níveis de treinamento -->
+        <section class="level" id="level-easy">
+            <h2>Nível Fácil</h2>
+            <h2>Identifique o Phishing</h2>
+            <p>Veja o exemplo abaixo e identifique se é um e-mail legítimo ou um ataque de phishing:</p>
+            <div class="email-sample">
+                <p><strong>De:</strong> suporte@banco-seguro.com</p>
+                <p><strong>Assunto:</strong> Ação necessária: Atualize suas informações de conta</p>
+                <p>Olá, cliente! Sua conta foi comprometida. Clique no link para atualizar suas informações imediatamente.</p>
+                <button class="option" data-answer="wrong">Legítimo</button>
+                <button class="option" data-answer="correct">Phishing</button>
+            <p class="feedback hidden" id="feedback-easy"></p>
+        </section>
+
+        <section class="level hidden" id="level-medium">
+            <h2>Nível Médio</h2>
+            <p>Qual é um sinal comum de um e-mail de phishing?</p>
+                <button class="option" data-answer="correct">Urgência excessiva e ameaças</button>
+                <button class="option" data-answer="wrong">Gramatica perfeita e saudação pessoal</button>
+                <button class="option" data-answer="wrong">Informações de contato claras</button>
+            <p class="feedback hidden" id="feedback-medium"></p>
+        </section>
+
+        <section class="level hidden" id="level-hard">
+            <h2>Nível Difícil</h2>
+            <p>Em um mundo cada vez mais conectado, os golpes na internet se tornaram uma ameaça constante para a segurança de indivíduos e empresas. Entre as diversas técnicas utilizadas por criminosos virtuais, qual se destaca como a mais prevalente nos golpes de phishing:</p>
+            <button class="option" data-answer="wrong">Ataques de força bruta para adivinhar senhas, explorando a fragilidade de combinações simples e repetitivas.</button>
+            <button class="option" data-answer="correct">Engenharia social, manipulando as vítimas por meio de mensagens persuasivas e convincentes para induzi-las a fornecer informações confidenciais ou realizar ações que beneficiam os criminosos.</button>
+            <button class="option" data-answer="wrong">Exploração de vulnerabilidades de software para instalar malware em dispositivos desatualizados ou com configurações de segurança inadequadas.</button>
+            <button class="option" data-answer="wrong">Ataques DDoS, sobrecarregando servidores e sites com tráfego excessivo para torná-los indisponíveis aos usuários legítimos.</button>
+            <button class="option" data-answer="wrong">Injeção de SQL, explorando falhas na segurança de bancos de dados para obter acesso a informações confidenciais.</button>
+            <p class="feedback hidden" id="feedback-hard"></p>
+        </section>
+
+        <button id="nextButton" class="hidden">Próximo</button>
+    </div>
+
+    <!-- Pop-up de conclusão -->
+    <div id="completionPopup" class="hidden">
+        <p id="completionMessage"></p>
+        <a href="iniciarJogo.html"><button>Voltar ao Início</button></a>
+    </div>
+
+    <script src="js/treinamentoPhishing.js"></script>
+</body>
+</html>

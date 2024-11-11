@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinamento: Falha de Rede</title>
+    <link rel="stylesheet" href="css/treinamentoFalhaRede.css">
+    <link rel="shortcut icon" type="image/png" href="./img/logo.png">
+</head>
+<body>
+    <div class="training-container">
+        <h1>Treinamento: Falha de Rede</h1>
+        <div class="progress">
+            <p id="progress">Progresso: 0%</p>
+            <p id="score">Pontuação: 0</p>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+
+        <!-- Níveis de treinamento -->
+        <section class="level" id="level-easy">
+            <h2>Nível Fácil</h2>
+            <h2>Desafio: O que você faria?</h2>
+            <p>Você recebeu um chamado de que a internet está fora do ar. O que você faz primeiro?</p>
+            <button class="option" data-answer="correct">Verificar se o modem está funcionando</button>
+            <button class="option" data-answer="wrong">Aguarde que a equipe de TI resolva</button>
+            <button class="option" data-answer="wrong">Reinicie todos os dispositivos da empresa</button>
+            <button class="option" data-answer="wrong">Verificar se o cabo de rede está desconectado</button>
+            <button class="option" data-answer="wrong">Verificar se o roteador está funcionando corretamente</button>
+            <p class="feedback hidden" id="feedback-easy"></p>
+        </section>
+
+        <section class="level hidden" id="level-medium">
+            <h2>Nível Médio</h2>
+            <p>Qual é a melhor prática para evitar falhas na rede?</p> 
+                <button class="option" data-answer="wrong">Ignorar alertas de rede</button>
+                <button class="option" data-answer="wrong">Desconectar dispositivos não utilizados</button>
+                <button class="option" data-answer="correct">Monitorar constantemente o desempenho da rede</button>
+                <button class="option" data-answer="wrong">Instalar softwares de segurança em todos os dispositivos da rede</button>
+                <button class="option" data-answer="wrong">Realizar manutenção periódica nos servidores</button>
+            <p class="feedback hidden" id="feedback-medium"></p>
+        </section>
+
+        <section class="level hidden" id="level-hard">
+            <h2>Nível Difícil</h2>
+            <p>Você recebeu um alerta de que a conexão de rede de um servidor crítico caiu. O que você faz primeiro?</p>
+            <button class="option" data-answer="wrong">Reiniciar o servidor imediatamente</button>
+            <button class="option" data-answer="correct">Verificar os logs do servidor para identificar falhas recentes</button>
+            <button class="option" data-answer="wrong">Verificar se a rede interna está funcional antes de investigar o servidor</button>
+            <button class="option" data-answer="wrong">Conferir a configuração de firewall do servidor</button>
+            <button class="option" data-answer="wrong">Testar a conectividade da rede externa</button>
+            <p class="feedback hidden" id="feedback-hard"></p>
+        </section>
+
+        <button id="nextButton" class="hidden">Próximo</button>
+    </div>
+
+    <!-- Pop-up de conclusão -->
+    <div id="completionPopup" class="hidden">
+        <p id="completionMessage"></p>
+        <a href="iniciarJogo.html"><button>Voltar ao Início</button></a>
+    </div>
+
+    <script src="js/treinamentoFalhaRede.js"></script>
+</body>
+</html>

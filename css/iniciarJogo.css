@@ -1,0 +1,117 @@
+body {
+    background: linear-gradient(135deg, #1d1f21, #34495e); /* Gradiente mais suave e elegante */
+    color: #ecf0f1; /* Texto em cor clara */
+    font-family: 'Roboto', sans-serif; /* Fonte moderna e legível */
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo em uma coluna */
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da janela */
+    justify-content: space-between; /* Faz com que o conteúdo ocupe o espaço restante e empurra o footer para o final */
+    align-items: center; /* Centraliza horizontalmente */
+}
+
+.container {
+    flex: 1; /* Faz o container ocupar o espaço restante da tela */
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.08); /* Fundo levemente escuro para contraste */
+    border-radius: 20px; /* Bordas arredondadas mais suaves */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Sombra sutil */
+    backdrop-filter: blur(10px); /* Adicionando desfoque ao fundo */
+}
+
+h1 {
+    font-size: 2.5em; /* Tamanho do título maior */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+.levels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.level-card {
+    background: rgba(255, 255, 255, 0.15); /* Fundo semi-transparente para os cartões */
+    border-radius: 15px;
+    padding: 20px;
+    width: 220px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.level-card:hover {
+    transform: scale(1.05); /* Aumentar levemente ao passar o mouse */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6); /* Sombra mais forte ao passar o mouse */
+}
+
+.level-card h2 {
+    font-size: 1.6em;
+    color: #3498db; /* Título azul */
+}
+
+.level-card p {
+    margin: 10px 0;
+    color: #ecf0f1;
+}
+
+button {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+}
+
+.back-link {
+    text-decoration: none;
+}
+
+#backToMenu {
+    margin-top: 20px;
+    background-color: #2ecc71;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ecf0f1;
+    padding: 15px;
+    text-align: center;
+    margin-top: auto; /* Empurra o footer para o final */
+    width: 100%; /* Garante que o footer ocupe toda a largura */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 130px;
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    color: #ecf0f1;
+    margin: 0 15px;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #3498db;
+}

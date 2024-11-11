@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinamento: Ataque Ransomware</title>
+    <link rel="stylesheet" href="css/treinamentoRansomware.css">
+    <link rel="shortcut icon" type="image/png" href="./img/logo.png">
+</head>
+<body>
+    <div class="training-container">
+        <h1>Treinamento: Ataque Ransomware</h1>
+        <div class="progress">
+            <p id="progress">Progresso: 0%</p>
+            <p id="score">Pontuação: 0</p>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+
+        <!-- Níveis de treinamento -->
+        <section class="level" id="level-easy">
+            <h2>Nível Fácil</h2>
+            <p>Um e-mail suspeito chegou à equipe. O que você faria?</p>
+            <button class="option" data-answer="correct">Reportar para o departamento de TI</button>
+            <button class="option" data-answer="wrong">Clicar no link para verificar</button>
+            <button class="option" data-answer="wrong">Ignorar</button>
+            <p class="feedback hidden" id="feedback-easy"></p>
+        </section>
+
+        <section class="level hidden" id="level-medium">
+            <h2>Nível Médio</h2>
+            <p>Um arquivo anexado desconhecido foi baixado por engano. O que você faria?</p>
+            <button class="option" data-answer="correct">Escanear o arquivo antes de abrir</button>
+            <button class="option" data-answer="wrong">Abrir para verificar</button>
+            <button class="option" data-answer="wrong">Excluir diretamente sem escanear</button>
+            <p class="feedback hidden" id="feedback-medium"></p>
+        </section>
+
+        <section class="level hidden" id="level-hard">
+            <h2>Nível Difícil</h2>
+            <p>Você identificou uma anomalia na rede. Qual seria a sua ação?</p>
+            <button class="option" data-answer="correct">Isolar a máquina e notificar a equipe de segurança</button>
+            <button class="option" data-answer="wrong">Ignorar por não haver confirmação</button>
+            <button class="option" data-answer="wrong">Reiniciar a máquina para tentar resolver</button>
+            <p class="feedback hidden" id="feedback-hard"></p>
+        </section>
+
+        <button id="nextButton" class="hidden">Próximo</button>
+    </div>
+
+    <!-- Pop-up de conclusão -->
+    <div id="completionPopup" class="hidden">
+        <p id="completionMessage"></p>
+        <a href="iniciarJogo.html"><button>Voltar ao Início</button></a>
+    </div>
+
+    
+
+    <script src="js/treinamentoRansomware.js"></script>
+</body>
+</html>
